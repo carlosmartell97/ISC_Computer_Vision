@@ -46,8 +46,11 @@ static void Threshold_Demo( int, void* ){
 int main( int argc, char** argv ){
   VideoCapture cap;
   // open the default camera, use something different from 0 otherwise
-  if(!cap.open(0))
+  if(!cap.open(0)){
+    printf("webcam is not active! exiting now...\n");
     return 0;
+  }
+  printf("Starting. Press ESC key to quit.\n");
 
   // Create a window
   namedWindow("Brightness and Contrast", 1);
