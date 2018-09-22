@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( edge_detection )
+find_package( OpenCV REQUIRED )
+add_executable( borders.exe edge_detection.cpp )
+target_link_libraries( borders.exe ${OpenCV_LIBS} )
